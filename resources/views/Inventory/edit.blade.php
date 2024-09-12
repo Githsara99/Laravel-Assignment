@@ -8,7 +8,7 @@
     </head>
     <body>
 
-<h1>Create</h1>
+<h1>Edit</h1>
 
 <div>
 
@@ -24,35 +24,35 @@
 
 </div>
 
-<form method="post" action="{{ route('inventory.store') }}" >
+<form method="post" action="{{ route('inventory.update', ['inventory' => $inventory]) }}" >
 
 
     @csrf
-    @method('post')
+    @method('put')
 
     <div>
         <label for="itemID">Item ID:</label><br>
-        <input type="text" id="itemID" name="itemID" ><br><br>
+        <input type="text" id="itemID" name="itemID" value="{{$inventory->itemID}}"><br><br>
     </div>
 
     <div>
         <label for="itemName">Item Name:</label><br>
-        <input type="text" id="itemName" name="itemName" ><br><br>
+        <input type="text" id="itemName" name="itemName" value="{{$inventory->itemName}}"><br><br>
     </div>
 
     <div>
         <label for="description">Description:</label><br>
-        <textarea id="description" name="description" ></textarea><br><br>
+        <textarea id="description" name="description" value="{{$inventory->description}}"></textarea><br><br>
     </div>
 
     <div>
         <label for="quantity">Quantity:</label><br>
-        <input type="number" id="quantity" name="quantity" ><br><br>
+        <input type="number" id="quantity" name="quantity" value="{{$inventory->quantity}}"><br><br>
     </div>
 
     <div>
         <label for="price">Price:</label><br>
-        <input type="text" id="price" name="price" step="0.01" ><br><br>
+        <input type="text" id="price" name="price" step="0.01" value="{{$inventory->price}}"><br><br>
     </div>
 
     <div>
