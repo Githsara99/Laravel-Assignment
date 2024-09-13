@@ -19,7 +19,7 @@ class InventoryController extends Controller
     public function store(Request $request){
         // Validate incoming data
         $data = $request->validate([
-            'itemID' => 'required',
+            // 'id' => 'required',
             'itemName' => 'required',
             'description' => 'nullable',
             'quantity' => 'required|integer',
@@ -48,7 +48,7 @@ class InventoryController extends Controller
     public function update(Inventory $inventory, Request $request){
         
         $data = $request->validate([
-            'itemID' => 'required',
+            // 'itemID' => 'required',
             'itemName' => 'required',
             'description' => 'nullable',
             'quantity' => 'required|integer',

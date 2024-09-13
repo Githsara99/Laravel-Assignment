@@ -5,16 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class inventory extends Model
+class inventories extends Model
 {
-    use HasFactory;
-
     protected $fillable = [
-        // 'id',
+       // 'id',
         'itemName',
         'description',
         'quantity',
         'price',
 
     ];
+
+    use HasFactory;
 }
